@@ -181,7 +181,7 @@ async function updateEpisodes() {
 
 }
 
-// فحص التحديث كل 10 ثوانٍ
+// فحص لتحديث كل 10 ثوانٍ
 setInterval(updateEpisodes, 10000);
 
 </script>
