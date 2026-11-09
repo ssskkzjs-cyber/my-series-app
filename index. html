@@ -1,76 +1,190 @@
-_3806y0s7s1.jpg" >
-    <div class="episode-title">فرسان قريح ج2 </div>
-</a>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+body {
+    margin: 0;
+    padding: 10px;
+    background: transparent;
+    font-family: Arial, sans-serif;
+}
 
-<a href="go:mmknn1" >
-    <img src="https://l.top4top.io/p_38045zhtt1.jpg" >
-    <div class="episode-title">ممكن</div>
-</a>
+.episodes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 
+.episodes-container a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
 
-<a href="go:wardf1" >
-    <img src="https://i.ibb.co/7d3MN2gC/315x420-9bf77df4b38feceddf47c47d093f39058574b4acfeeb70f59892c49a2e8fbe29.jpg" >
-    <div class="episode-title">وردعلي فل وياسمين</div>
-</a>
+.episodes-container img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
 
+.episode-title {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 2px;
+    color: white;
+}
+</style>
+</head>
 
+<body>
 
-
-<a href="go:sister1" >
-    <img src="https://b.top4top.io/p_380216q0f1.png" >
-    <div class="episode-title">سستر فخرية</div>
-</a>
-
-
-
-<a href="go:lill1" >
-    <img src="https://j.top4top.io/p_3785r88t91.jpg" >
-    <div class="episode-title">ليل</div>
-</a>
-
-
-
-
-<a href="go:horghn1" >
-    <img src="https://f.top4top.io/p_37813ez1a1.jpg" >
-    <div class="episode-title">حفرة جهنم</div>
-</a>
-
-
-<a href="go:fransw1" >
-    <img src="https://j.top4top.io/p_3956urq7f1.jpg" >
-    <div class="episode-title">الفرنساوي</div>
-</a>
-
-<a href="go:game5" >
-    <img src="https://h.top4top.io/p_3749bgngu1.jpg" >
-    <div class="episode-title">اللعبة 5 </div>
-</a>
-
-
-<a href="go:faqra1" >
-    <img src="https://i.ibb.co/tTwTQTmv/Whats-App-Image-2026-01-27-at-1-29-26-PM.jpg" >
-    <div class="episode-title">بطل العالم</div>
-</a>
-
-<a href="go:babaa1" >
-    <img src="https://d.top4top.io/p_3679uqsw81.jpeg" >
-    <div class="episode-title">بيت بابا</div>
-</a>
-
-<a href="go:eeladl1" >
-    <img src="https://j.top4top.io/p_36793j5sr1.jpeg" >
-    <div class="episode-title">قسمة العدل</div>
-</a>
-
-<a href="go:leba2" >
-    <img src="https://b.top4top.io/p_3679ipfay1.jpeg" >
-    <div class="episode-title">لعبة وقلبت بجد</div>
-</a>
-
+<div class="episodes-container" id="episodes">
 </div>
 
+<script>
+
+// بيانات المسلسلات
+let initialData = [
+
+{
+ title: "ممكن",
+ image: "https://l.top4top.io/p_38045zhtt1.jpg",
+ link: "go:mmknn1"
+},
+
+{
+ title: "ورد علي فل وياسمين",
+ image: "https://i.ibb.co/7d3MN2gC/315x420-9bf77df4b38feceddf47c47d093f39058574b4acfeeb70f59892c49a2e8fbe29.jpg",
+ link: "go:wardf1"
+},
+
+{
+ title: "سستر فخرية",
+ image: "https://b.top4top.io/p_380216q0f1.png",
+ link: "go:sister1"
+},
+
+{
+ title: "ليل",
+ image: "https://j.top4top.io/p_3785r88t91.jpg",
+ link: "go:lill1"
+},
+
+{
+ title: "حفرة جهنم",
+ image: "https://f.top4top.io/p_37813ez1a1.jpg",
+ link: "go:horghn1"
+},
+
+{
+ title: "الفرنساوي",
+ image: "https://j.top4top.io/p_3956urq7f1.jpg",
+ link: "go:fransw1"
+},
+
+{
+ title: "اللعبة 5",
+ image: "https://h.top4top.io/p_3749bgngu1.jpg",
+ link: "go:game5"
+},
+
+{
+ title: "بطل العالم",
+ image: "https://i.ibb.co/tTwTQTmv/Whats-App-Image-2026-01-27-at-1-29-26-PM.jpg",
+ link: "go:faqra1"
+},
+
+{
+ title: "بيت بابا",
+ image: "https://d.top4top.io/p_3679uqsw81.jpeg",
+ link: "go:babaa1"
+},
+
+{
+ title: "قسمة العدل",
+ image: "https://j.top4top.io/p_36793j5sr1.jpeg",
+ link: "go:eeladl1"
+},
+
+{
+ title: "لعبة وقلبت بجد",
+ image: "https://b.top4top.io/p_3679ipfay1.jpeg",
+ link: "go:leba2"
+}
+
+];
+
+// ضع رابط ملف JSON الخارجي هنا لاحقاً
+const DATA_URL = "";
+
+const container = document.getElementById("episodes");
+
+// عرض المسلسلات
+function displayEpisodes(data) {
+
+    container.innerHTML = "";
+
+    data.forEach(item => {
+
+        const a = document.createElement("a");
+        a.href = item.link;
+
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.alt = item.title;
+        img.loading = "lazy";
+
+        const title = document.createElement("div");
+        title.className = "episode-title";
+        title.textContent = item.title;
+
+        a.appendChild(img);
+        a.appendChild(title);
+
+        container.appendChild(a);
+
+    });
+}
+
+// العرض الأول
+displayEpisodes(initialData);
+
+// تحديث البيانات من الإنترنت
+async function updateEpisodes() {
+
+    if (!DATA_URL) return;
+
+    try {
+
+        const response = await fetch(
+            DATA_URL + "?t=" + Date.now(),
+            { cache: "no-store" }
+        );
+
+        if (!response.ok) return;
+
+        const newData = await response.json();
+
+        if (Array.isArray(newData)) {
+            displayEpisodes(newData);
+        }
+
+    } catch (error) {
+        console.log("تعذر تحديث البيانات");
+    }
+
+}
+
+// فحص التحديث كل 10 ثوانٍ
+setInterval(updateEpisodes, 10000);
+
+</script>
 
 </body>
 </html>
